@@ -1,0 +1,11 @@
+.grid-center {
+  .grid-ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    .grid-a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}

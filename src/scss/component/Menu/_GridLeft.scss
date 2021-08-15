@@ -1,0 +1,71 @@
+* {
+  font-family: "Work Sans", sans-serif;
+  box-sizing: border-box;
+}
+.lala {
+  display: flex;
+  justify-content: space-around;
+  .search {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 225px;
+    width: 100%;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    transition: 0.3s;
+    border-radius: 23px;
+    height: 41px;
+    & > * {
+      border: none;
+      outline: none;
+    }
+    &__input {
+      padding: 0 15px;
+      height: 100%;
+      width: calc(100% - 30px);
+      font-size: 12px;
+      box-sizing: border-box;
+
+      &:not(:placeholder-shown) {
+        + .search__button {
+          transform: translateY(0px);
+        }
+      }
+      &:placeholder-shown {
+        + .search__button {
+          transform: translateY(60px);
+        }
+      }
+    }
+    &__button {
+      border-radius: 30px;
+      background: #333;
+      color: #feffd4;
+      font-size: 12px;
+      cursor: pointer;
+      width: 57px;
+      height: calc(100% - 13px);
+      transition: 0.3s;
+      position: absolute;
+      right: 10px;
+      top: 7px;
+    }
+    // &:focus-within {
+    //   transform: translateY(-4px);
+    //   border-color: #bbb;
+    //   box-shadow: 4px 4px 0 #ddd, 8px 8px 0 darken(#feffd4, 15%);
+    // }
+  }
+  .Mui-tenten {
+    &:hover {
+      width: 30px;
+      height: 30px;
+      border: 1px solid black;
+      border-radius: 50%;
+      padding-left: 2px;
+      padding-top: 2px;
+      background-color: #80808047;
+    }
+  }
+}
