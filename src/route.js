@@ -1,6 +1,8 @@
-import ImageShoe from "./components/InfoImg/ImageShoe";
-import Home from "./pages/Home";
 
+import Home from "./pages/Home";
+import { ListProduct } from "./pages/ListProduct/ListProduct";
+import MenProduct from "./pages/MenProduct/MenProduct";
+import DetailProduct from "./pages/DetailProduct/DetailProduct"
 export const RouteHomePage = [
     {
         path: "/",
@@ -8,8 +10,18 @@ export const RouteHomePage = [
         component: Home
     },
     {
-        path: "/listShoes",
+        path: "/men",
         exact: false,
-        component: ImageShoe,
+        component: MenProduct,
+    },
+    {
+        path: "/listProduct",
+        exact: false,
+        component: ListProduct,
+    },
+    {
+        path: "/detailProduct/:id",
+        exact: false,
+        component: DetailProduct,
     },
 ]

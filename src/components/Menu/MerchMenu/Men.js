@@ -1,5 +1,7 @@
 import React from 'react'
 import { makeStyles } from "@material-ui/core/styles"
+import { Link, useHistory } from 'react-router-dom';
+
 export default function Men() {
     const [hover, setHover] = React.useState(false);
     // const [css, setCss] = React.useState(null)
@@ -10,6 +12,7 @@ export default function Men() {
     //     }
     // }))
     // const classes = useStyles();
+    const history=useHistory();
     return (
 
         <div className="main" onMouseEnter={() => {
@@ -18,7 +21,9 @@ export default function Men() {
         }
         } onMouseLeave={() => { setHover(false); }}>
             <div className="grid-hover" style={{ marginBottom: "50px" }}>
-                <h6>Men</h6>
+                <Link
+                onClick={()=>history.push("/men")}
+                >Men</Link>
             </div>
 
             <div className="grid-dropDown">

@@ -12,7 +12,7 @@ export const actGetProductAPI = (gender, typeProduct) => {
     try {
       dispatch(createAction({type: ActionType.IS_LOADING_LIST_PRODUCT, payload: true}))
       const res = await API(
-        `product/?gender=${gender}&typeProduct=${typeProduct}`,
+        `product/`,
         "GET"
       );
       dispatch(

@@ -4,7 +4,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import { RouteHomePage } from "./route";
 import HomeTemplate from "./template/HomeTemplate";
-
+import "react-toastify/dist/ReactToastify.css"
+import {ToastContainer} from "react-toastify"
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
   }
   return (
     <BrowserRouter>
+    <ToastContainer/>
       <Switch>
         {showMenuHome(RouteHomePage)}
         <Route path="" component={PageNotFound} />
