@@ -4,7 +4,6 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 
-
 const useStyles = makeStyles((theme) => ({
   nav: {
     backgroundColor: "white",
@@ -124,7 +123,6 @@ export default function NavSub() {
             )}
           </div>
           |
-         
         </div>
       </Toolbar>
     </AppBar>

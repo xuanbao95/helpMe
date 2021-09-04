@@ -24,4 +24,5 @@ export const RouteHomePage = [
         exact: false,
         component: DetailProduct,
     },
+    
 ]

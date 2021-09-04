@@ -43,7 +43,7 @@ export default function ProductImage({ detailProduct, index }) {
     autoplay: false,
   };
 
-  const isloading = useSelector((state) => state.cartReducer.isloading);
+  const isloading = useSelector((state) => state.reducerCart.isloading);
   var listLazyLoad = [];
   for (let i = 0; i < 6; i++) {
     listLazyLoad.push(

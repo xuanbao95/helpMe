@@ -22,7 +22,6 @@ export default function MenComponent(props) {
     const classes=useStyles();
     const dispatch=useDispatch();
     const history=useHistory();
-    const data=useSelector((state)=>state.reducer.data)
     React.useEffect(()=>{
        dispatch(action.actGetProductAPI());
         

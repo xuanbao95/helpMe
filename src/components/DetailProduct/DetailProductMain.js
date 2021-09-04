@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import API from "../../Axios/API"
-import * as ActionType from "../Cart/Module/contants/contant"
+import * as ActionType from "../List Product/module/Constants/contants"
 import { useDispatch, useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import  Hidden  from "@material-ui/core/Hidden";
@@ -27,7 +27,6 @@ export default function DetailProductMain(props){
     const {id}=props;
     
     const [productDetail,setProductDetail]=useState(null);
-    //tao index de lay vi tri hinh anh
     const [index,setIndex]=useState(0);
     const getIndex=(index)=>{
         setIndex(index)
@@ -37,17 +36,18 @@ export default function DetailProductMain(props){
         const callAPI=async()=>{
             try{
                 dispatch(createAction({
-                    type:ActionType.IS_LOADING,
+                    type:ActionType.IS_LOADING_LIST_PRODUCT,
                     payload:true,
                 }));
                 const res =await API(
                     `product/${id}`,
                     "GET",
                 )
+       
                 setProductDetail(res.data);
                 
                 dispatch(createAction({
-                    type:ActionType.IS_LOADING,
+                    type:ActionType.IS_LOADING_LIST_PRODUCT,
                     payload:false,
                 }));
             }catch(er){
@@ -56,7 +56,7 @@ export default function DetailProductMain(props){
         }
         callAPI();
     },[])
-    const isloading=useSelector(state=>state.cartReducer.isloading);
+    const isloading=useSelector(state=>state.reducerCart.isloading);
     const dataLazyLoad = {
         color: 2,
         _id: "5f82f4c0de96ef2b3d91c17c",

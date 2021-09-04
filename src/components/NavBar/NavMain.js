@@ -1,8 +1,8 @@
 import React from "react";
-import NavMainMenu from "./NavComponent/NavMainMenu";
-import NavMainFeature from "./NavComponent/NavMainFeature";
-import LogoNike from "./NavComponent/LogoNike";
-import SearchBar from "./NavComponent/SearchBar";
+import NavMainMenu from "./NavMainComponents/NavMainMenu";
+// import NavMainFeature from "./NavMainComponents/NavMainFeature";
+import LogoNike from "./NavMainComponents/LogoNike";
+import SearchBox from "./NavMainComponents/SearchBox";
 import PropTypes from "prop-types";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -63,10 +63,10 @@ export default function NavMain(props) {
           <Toolbar className={classes.toolbar}>
             <NavMainMenu />
             <LogoNike />
-            <NavMainFeature />
+            {/* <NavMainFeature /> */}
           </Toolbar>
 
-          <SearchBar/>
+          {/* <SearchBox /> */}
         </AppBar>
       </HideOnScroll>
       <div id="fallback" className={classes.fallback}></div>

@@ -1,4 +1,0 @@
-export const DATA_SEARCH_LIST="DATA_SEARCH_LIST";
-export const DATA_SUGGEST_LIST="DATA_SUGGEST_LIST";
-export const DATA_ALL_LIST="DATA_ALL_LIST";
-export const IS_LOADING="IS_LOADING";
